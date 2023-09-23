@@ -7,5 +7,4 @@ const useStyles = makeStyles(
   }),
   { index: 1 }
 );
-
 export { useStyles };

@@ -3,6 +3,7 @@ import axios from "axios";
 import { getSessionToken, removeSessionToken } from "../../utils/session";
 import history from "../../routes/history";
 import { useStyles } from "./styles";
+
 const Logout = (props) => {
   const classes = useStyles();
   const logout = () => {
