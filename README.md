@@ -157,6 +157,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 3. Now if the validate user method returns true then createBooking method of booking service method is called that sets booking id for that booking object and saves the booking object in the booking repository and returns the object.
 4. Now a new booking is retured along with 200 status code as ResponseEntity object's body and status respectively to the front-end server.
 
-{{{{{{{{{{  front-end:  }}}}}}}}}}}}
+Front-end:
 
 1. Now axios.then() method executes and the user is redirected to the home page using history.push("/home").
