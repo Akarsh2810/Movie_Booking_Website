@@ -1,5 +1,6 @@
 import Logout from "../Logout";
 import { useStyles } from "./styles";
+
 const Header = () => {
   const classes = useStyles();
   return (

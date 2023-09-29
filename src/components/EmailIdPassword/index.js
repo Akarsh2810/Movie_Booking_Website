@@ -11,12 +11,12 @@ import { useStyles } from "./styles.js";
 import { setSessionToken } from "../../utils/session";
 
 function Alert(props) {
-  return <MuiAlert elevation={24} variant="filled" {...props} />;
+  return <MuiAlert elevation={24} variant="standard" {...props} />;
 }
 const EmailIdPassword = (props) => {
   const { setLoading } = props;
-  const [validated, setValidated] = useState(null);
-  const [openBodySnackBar, setOpenBodySnackBar] = useState(null);
+  const [validated, setValidated] = useState(true);
+  const [openBodySnackBar, setOpenBodySnackBar] = useState(false);
   const initialValues = {
     emailId: "",
     password: "",
@@ -44,7 +44,6 @@ const EmailIdPassword = (props) => {
         console.log("data", data);
         formik.resetForm();
         setOpenBodySnackBar(true);
-        setValidated(true);
         setLoading(false);
         const user = data;
         setSessionToken("session_id", user?.data?.session_id);
