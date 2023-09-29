@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Box, Button } from "@material-ui/core";
 import { Formik, Form } from "formik";
 import axios from "axios";
@@ -9,9 +8,6 @@ import { useStyles } from "./styles.js";
 import { getSessionToken } from "../../utils/session";
 
 const BookMovie = (props) => {
-  // const { setLoading } = props
-  const [validated, setValidated] = useState(false);
-  const [openBodySnackBar, setOpenBodySnackBar] = useState(false);
   const initialValues = {
     movieName: "",
     date: "",
@@ -27,11 +23,8 @@ const BookMovie = (props) => {
     userMailId: Yup.string().required("*required"),
   });
 
-  const handleBodySnackBarClose = () => {
-    setOpenBodySnackBar(false);
-  };
   const reactOnSubmit = (values, formik) => {
-    //   setLoading(true)
+    // setLoading(true)
     const url = `http://localhost:8080/booking`;
     const config = {
       headers: { session_id: getSessionToken("session_id") },
@@ -45,11 +38,11 @@ const BookMovie = (props) => {
     };
     axios
       .post(url, data, config)
-      .then((data) => {
+      .then(() => {
         formik.resetForm();
         history.push("/home");
       })
-      .catch((error) => {});
+      .catch(() => {});
   };
 
   const classes = useStyles();

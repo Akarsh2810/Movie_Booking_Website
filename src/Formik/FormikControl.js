@@ -1,5 +1,6 @@
 import React from "react";
 import InputField from "./InputField";
+
 const FormikControl = (props) => {
   const { control, ...rest } = props;
   switch (control) {

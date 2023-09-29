@@ -7,7 +7,9 @@ import { getSessionToken } from "../../utils/session";
 
 const BookingPage = (props) => {
   const classes = useStyles();
-  if (_.isEmpty(getSessionToken("session_id")) === true) history.push("/");
+  if (_.isEmpty(getSessionToken("session_id")) === true) {
+    history.push("/");
+  }
   
   return (
     <div>
