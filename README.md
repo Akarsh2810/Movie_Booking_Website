@@ -94,7 +94,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - The other answer is incorrect. You don't NEED Node.js, in fact you could create a project without running a single npm command. 
 - The main reason, as pointed out in the article, is:
 1. Easy package management. This means you can upgrade the package easily later on
-2. JSX is the templating language that makes it way easier to write components: <h1>Hello Word</h1> reads so much better than React.createElement('h1', null, 'Hello World')
+2. JSX is the templating language that makes it way easier to write components: <h1>Hello World</h1> reads so much better than React.createElement('h1', null, 'Hello World')
 3. Managing module imports, as opposed to having global variables around everywhere, it's great to have encapsulation and import modules as needed.
 4. Build step and workflow. For a modern project, you will need tools to minify your code, cache busting, transpiling (writing pure javascript for old browser is a pain and you really shouldn't do it manually), the list goes on and on.
 - Because almost all the JavaScript libraries/frameworks are using the Node Package Manager (NPM), that makes much more convenient to manage JavaScript dependencies in general, both client-side and server-side.
