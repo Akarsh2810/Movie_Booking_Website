@@ -199,24 +199,26 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 **"src" folder:**
 
 **App Component:**
-3. The App component is a functional component that returns a component called Routes when the Route path is "/". The Routes component is called inside BrowserRouter component.
-4. We have to import BrowserRouter and Route (both of these are main react router components) from react-router-dom library.
-5. BrowserRouter: It is a router implementation that uses HTML5 history API to keep the UI in sync with the URL. It is the parent component that is used to store all other components.
-6. Route: It is a component that helps us to establish the link between the component's UI and the URL. Instead of traversing the sequence, routes are selected based on the best match.
+
+1. The App component is a functional component that returns a component called Routes when the Route path is "/". The Routes component is called inside BrowserRouter component.
+2. We have to import BrowserRouter and Route (both of these are main react router components) from react-router-dom library.
+3. BrowserRouter: It is a router implementation that uses HTML5 history API to keep the UI in sync with the URL. It is the parent component that is used to store all other components.
+4. Route: It is a component that helps us to establish the link between the component's UI and the URL. Instead of traversing the sequence, routes are selected based on the best match.
 
 **Routes Component:**
-7. The Routes component is a class component that extends Component class imported from react library. Inside routes component, we check whether sessionID is stored in session storage or not using window.location.pathname and _ (lodash).
-8. window.location.pathname returns the path and filename of the current page.
-9. If sessionID is stored then we push "/home" path to the history of the web browser else we don't do anything. 
-10. The createBrowserHistory of the history library manages the page navigation as par the browser preference. The history for the forward and go-back buttons on top of the browser can be managed through this package.
-11. The getSessionToken component of session.js file can get the session token stored in sessionStorage of the browser.
-12. The session.js file also contains setSessionToken and removeSessionToken that can set and remove the session token from the sessionStorage of the browser.
-13. The switch component of the react-router-dom is used to read a single component by wrapping all routes inside switch component.
-14. Depending on the current route path, the user is redirected to that web page.
-15. If the route exact path is "/" then landing page component is rendered, if the route exact path is "/home" then home page component is rendered, and if the route exact path is "/booking" then booking page component is rendered else an error page component is rendered.
-16. Exact: The matches the exact value with the URL. Example: exact path = "/about" will only render the component if it exactly matches with the path. But if we remove "exact" from the syntax, then the UI will still be rendered even if the path structure is "/about/something".
-17. Path: It specifies the path name that we assign to our component
-18. Element: It is the component that will render if the path matches.
+
+1. The Routes component is a class component that extends Component class imported from react library. Inside routes component, we check whether sessionID is stored in session storage or not using window.location.pathname and _ (lodash).
+2. window.location.pathname returns the path and filename of the current page.
+3. If sessionID is stored then we push "/home" path to the history of the web browser else we don't do anything. 
+4. The createBrowserHistory of the history library manages the page navigation as par the browser preference. The history for the forward and go-back buttons on top of the browser can be managed through this package.
+5. The getSessionToken component of session.js file can get the session token stored in sessionStorage of the browser.
+6. The session.js file also contains setSessionToken and removeSessionToken that can set and remove the session token from the sessionStorage of the browser.
+7. The switch component of the react-router-dom is used to read a single component by wrapping all routes inside switch component.
+8. Depending on the current route path, the user is redirected to that web page.
+9. If the route exact path is "/" then landing page component is rendered, if the route exact path is "/home" then home page component is rendered, and if the route exact path is "/booking" then booking page component is rendered else an error page component is rendered.
+10. Exact: The matches the exact value with the URL. Example: exact path = "/about" will only render the component if it exactly matches with the path. But if we remove "exact" from the syntax, then the UI will still be rendered even if the path structure is "/about/something".
+11. Path: It specifies the path name that we assign to our component
+12. Element: It is the component that will render if the path matches.
 
 **Landing Page:**
 
